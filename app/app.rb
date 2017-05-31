@@ -3,8 +3,6 @@ require_relative 'models/link'
 
 class BookmarkManager < Sinatra::Base
 
-enable :sessions
-
   get '/' do
     redirect '/links'
   end
