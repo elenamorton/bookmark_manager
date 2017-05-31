@@ -17,8 +17,10 @@
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+require './app/models/link'
 
-require File.join(File.dirname(__FILE__), '..', 'app.rb')
+require  './app/app'
+#require File.join(File.dirname(__FILE__), '..', 'app/app.rb')
 
 ENV['RACK_ENV'] = 'test'
 
