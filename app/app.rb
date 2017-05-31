@@ -1,3 +1,5 @@
+ENV['RACK_ENV'] ||= 'development'
+
 require 'sinatra/base'
 require_relative 'models/link'
 
@@ -24,8 +26,7 @@ class BookmarkManager < Sinatra::Base
   run! if app_file == $0
 end
 
-
-DataMapper.setup(:default, 'postgres://localhost/bookmark_manager_test')
+DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{ENV['RACK_ENV']}")
 
 DataMapper.finalize
 DataMapper.auto_upgrade!
