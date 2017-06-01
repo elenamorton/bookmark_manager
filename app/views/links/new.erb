@@ -1,12 +1,24 @@
 <h1> New Link </h1>
 <form action='/links' method='post'>
-  <label for='title'> Title:
- <input type='text' name='title'>
+
+ <label for='title'>
+   Title:
+    <input type='text' name='title'>
  </label>
  <br/>
- <label for='url'> URL :
- <input type='text' name='url'>
+
+ <label for='url'>
+  URL :
+   <input type='text' name='url'>
  </label>
- <br/><br/>
+ <br/>
+ <label for='tags'>
+  Tags :
+   <input type='text' name='tags'>
+   <%= p __FILE__, params[:tag]%>
+ </label>
+ <br/>
+ <br/>
  <input type='submit' value='Create link'>
+ <%= p __FILE__, params[:tag]%>
 </form>
