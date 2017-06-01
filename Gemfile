@@ -9,5 +9,6 @@ end
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'dm-rspec'
+gem 'rake'
 gem 'shotgun'
 gem 'sinatra'

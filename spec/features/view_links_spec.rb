@@ -9,7 +9,6 @@ feature 'Can view links on homepage' do
     expect(page.status_code).to eq 200
 
     within 'ul#links' do
-      p __FILE__,__LINE__, link
       expect(page).to have_content('Makers Academy')
     end
   end
